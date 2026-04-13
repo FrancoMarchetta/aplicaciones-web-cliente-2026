@@ -1,0 +1,331 @@
+.movie-hero {
+    position: relative;
+    width: 100%;
+    min-height: 50vh;
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 2rem;
+}
+
+.movie-hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(3px);
+    transform: scale(1.05);
+}
+
+.movie-hero-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+    width: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.6) 50%, transparent 100%);
+    align-items: flex-end;
+}
+
+.movie-poster {
+    width: 180px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    flex-shrink: 0;
+}
+
+.movie-hero-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.movie-hero-info h2 {
+    color: #ffffff;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    border: none;
+    padding: 0;
+    text-align: left;
+}
+
+.movie-genre {
+    color: #cccccc;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.movie-rating {
+    color: #ffcc00;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.movie-details {
+    padding: 0 2rem;
+    margin-bottom: 2rem;
+}
+
+.movie-info-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.movie-description h3 {
+    color: #e50914;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #333;
+}
+
+.movie-description p {
+    color: #aaaaaa;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.movie-data {
+    background-color: #1a1a1a;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.data-item {
+    margin-bottom: 1rem;
+}
+
+.data-item:last-child {
+    margin-bottom: 0;
+}
+
+.data-label {
+    display: block;
+    color: #e50914;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.data-value {
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+.booking-section {
+    padding: 0 2rem;
+    margin-bottom: 2rem;
+}
+
+.booking-container {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.booking-options h3 {
+    color: #e50914;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #333;
+}
+
+.date-selection {
+    margin-bottom: 2rem;
+}
+
+.date-buttons {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.date-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 70px;
+    background-color: #1a1a1a;
+    border: 2px solid #333;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.date-btn:hover {
+    border-color: #e50914;
+    transform: translateY(-2px);
+}
+
+.date-btn.active {
+    background-color: #e50914;
+    border-color: #e50914;
+}
+
+.date-day {
+    color: #888;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.date-btn.active .date-day {
+    color: #ffffff;
+}
+
+.date-number {
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.time-buttons {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.time-btn {
+    padding: 0.75rem 1.5rem;
+    background-color: #1a1a1a;
+    border: 2px solid #333;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.time-btn:hover {
+    border-color: #e50914;
+    transform: translateY(-2px);
+}
+
+.time-btn.active {
+    background-color: #e50914;
+    border-color: #e50914;
+}
+
+.booking-summary {
+    background-color: #1a1a1a;
+    padding: 1.5rem;
+    border-radius: 8px;
+    height: fit-content;
+}
+
+.booking-summary h3 {
+    color: #e50914;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #333;
+}
+
+.summary-movie {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #333;
+}
+
+.summary-poster {
+    width: 60px;
+    border-radius: 4px;
+}
+
+.summary-info h4 {
+    color: #ffffff;
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+}
+
+.summary-info p {
+    color: #888;
+    font-size: 0.85rem;
+}
+
+.summary-details {
+    margin-bottom: 1.5rem;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.75rem;
+}
+
+.summary-label {
+    color: #888;
+    font-size: 0.9rem;
+}
+
+.summary-value {
+    color: #ffffff;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.summary-price {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #333;
+}
+
+.summary-price .summary-value {
+    color: #e50914;
+    font-size: 1.2rem;
+}
+
+.booking-btn {
+    width: 100%;
+    padding: 1rem;
+    background-color: #e50914;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.booking-btn:hover {
+    background-color: #b8070f;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .movie-hero-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .movie-hero-info {
+        align-items: center;
+    }
+
+    .movie-hero-info h2 {
+        text-align: center;
+    }
+
+    .movie-info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .booking-container {
+        grid-template-columns: 1fr;
+    }
+}

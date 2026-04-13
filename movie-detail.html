@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle de Película - Cine ISTEA</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/movie-detail.css">
+</head>
+
+<body>
+    <header>
+        <h1>ISTEA</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#">Cartelera</a></li>
+                <li><a href="#">Administrar</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="movie-hero">
+            <img class="movie-hero-bg" 
+                src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=1920" alt="Fondo de película">
+            
+            <div class="movie-hero-content">
+                <img class="movie-poster" 
+                    src="https://images.unsplash.com/photo-1535016120720-40c646be5580?w=400" alt="Póster de película">
+                
+                <div class="movie-hero-info">
+                    <h2>Título de la Película</h2>
+                    <p class="movie-genre">Acción | Aventura | Sci-Fi</p>
+                    <p class="movie-rating">⭐ 8.5/10</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="movie-details">
+            <div class="movie-info-grid">
+                <div class="movie-description">
+                    <h3>Sinopsis</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt 
+                        ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+                        ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
+                        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    </p>
+                </div>
+                
+                <div class="movie-data">
+                    <div class="data-item">
+                        <span class="data-label">Duración</span>
+                        <span class="data-value">120 min</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="data-label">Director</span>
+                        <span class="data-value">Nombre Director</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="data-label">Elenco</span>
+                        <span class="data-value">Actor 1, Actor 2, Actor 3, Actor 4</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="booking-section">
+            <div class="booking-container">
+                <div class="booking-options">
+                    <div class="date-selection">
+                        <h3>Seleccionar Fecha</h3>
+                        <div class="date-buttons">
+                            <button type="button" class="date-btn">
+                                <span class="date-day">Lun</span>
+                                <span class="date-number">14</span>
+                            </button>
+                            <button type="button" class="date-btn">
+                                <span class="date-day">Mar</span>
+                                <span class="date-number">15</span>
+                            </button>
+                            <button type="button" class="date-btn active">
+                                <span class="date-day">Mié</span>
+                                <span class="date-number">16</span>
+                            </button>
+                            <button type="button" class="date-btn">
+                                <span class="date-day">Jue</span>
+                                <span class="date-number">17</span>
+                            </button>
+                            <button type="button" class="date-btn">
+                                <span class="date-day">Vie</span>
+                                <span class="date-number">18</span>
+                            </button>
+                            <button type="button" class="date-btn">
+                                <span class="date-day">Sáb</span>
+                                <span class="date-number">19</span>
+                            </button>
+                            <button type="button" class="date-btn">
+                                <span class="date-day">Dom</span>
+                                <span class="date-number">20</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="time-selection">
+                        <h3>Seleccionar Horario</h3>
+                        <div class="time-buttons">
+                            <button type="button" class="time-btn">14:00</button>
+                            <button type="button" class="time-btn">17:00</button>
+                            <button type="button" class="time-btn active">20:00</button>
+                            <button type="button" class="time-btn">23:00</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="booking-summary">
+                    <h3>Resumen de Reserva</h3>
+                    <div class="summary-content">
+                        <div class="summary-movie">
+                            <img class="summary-poster" 
+                                src="https://images.unsplash.com/photo-1535016120720-40c646be5580?w=100" alt="Póster">
+                            <div class="summary-info">
+                                <h4>Título de la Película</h4>
+                                <p>Acción | 120 min</p>
+                            </div>
+                        </div>
+                        
+                        <div class="summary-details">
+                            <div class="summary-row">
+                                <span class="summary-label">Fecha</span>
+                                <span class="summary-value">Mié 16</span>
+                            </div>
+                            <div class="summary-row">
+                                <span class="summary-label">Horario</span>
+                                <span class="summary-value">20:00</span>
+                            </div>
+                            <div class="summary-row">
+                                <span class="summary-label">Sala</span>
+                                <span class="summary-value">Sala 2</span>
+                            </div>
+                            <div class="summary-row summary-price">
+                                <span class="summary-label">Precio</span>
+                                <span class="summary-value">$1.500</span>
+                            </div>
+                        </div>
+
+                        <button type="button" class="booking-btn">Reservar Asientos</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Cine ISTEA. Todos los derechos reservados.</p>
+    </footer>
+</body>
+
+</html>
