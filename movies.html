@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartelera - Cine ISTEA</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/movies.css">
+    <script defer src="/js/HeaderController.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>ISTEA</h1>
+        <nav>
+            <ul>
+               <li><a id="header-inicio" href="#">Inicio</a></li>
+                <li><a id="header-cartelera" href="#">Cartelera</a></li>
+                <li><a id="header-administrar" href="#">Administrar</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="movies-container">
+            <div class="filters-bar">
+                <h2 class="page-title">Cartelera</h2>
+
+                <div class="filter-group">
+                    <label class="filter-title" for="genero">Género</label>
+                    <select id="genero" class="filter-select">
+                        <option value="">Todos</option>
+                        <option value="accion">Acción</option>
+                        <option value="comedia">Comedia</option>
+                        <option value="drama">Drama</option>
+                        <option value="terror">Terror</option>
+                        <option value="scifi">Sci-Fi</option>
+                        <option value="romance">Romance</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label class="filter-title" for="clasificacion">Clasificación</label>
+                    <select id="clasificacion" class="filter-select">
+                        <option value="">Todas</option>
+                        <option value="atp">ATP</option>
+                        <option value="13">+13</option>
+                        <option value="18">+18</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label class="filter-title" for="rating">Ordenar por</label>
+                    <select id="rating" class="filter-select">
+                        <option value="populares">Más populares</option>
+                        <option value="menos-populares">Menos populares</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="movies-grid">
+                <div class="movie">
+                    <a href="movie-detail.html">
+                        <div class="movie-image"></div>
+                        <h3>El Último Viaje</h3>
+                        <p>Acción | 2025</p>
+                    </a>
+                </div>
+                <div class="movie">
+                    <a href="#">
+                        <div class="movie-image"></div>
+                        <h3>Noches de Luna</h3>
+                        <p>Drama | 2024</p>
+                    </a>
+                </div>
+                <div class="movie">
+                    <a href="#">
+                        <div class="movie-image"></div>
+                        <h3>Código Rojo</h3>
+                        <p>Sci-Fi | 2026</p>
+                    </a>
+                </div>
+                <div class="movie">
+                    <a href="#">
+                        <div class="movie-image"></div>
+                        <h3>Risas al Viento</h3>
+                        <p>Comedia | 2025</p>
+                    </a>
+                </div>
+                <div class="movie">
+                    <a href="#">
+                        <div class="movie-image"></div>
+                        <h3>El Bosque</h3>
+                        <p>Terror | 2025</p>
+                    </a>
+                </div>
+                <div class="movie">
+                    <a href="#">
+                        <div class="movie-image"></div>
+                        <h3>Corazones Rotos</h3>
+                        <p>Romance | 2024</p>
+                    </a>
+                </div>
+                <div class="movie">
+                    <a href="#">
+                        <div class="movie-image"></div>
+                        <h3>Resistencia</h3>
+                        <p>Acción | 2026</p>
+                    </a>
+                </div>
+                <div class="movie">
+                    <a href="#">
+                        <div class="movie-image"></div>
+                        <h3>Enigmas</h3>
+                        <p>Drama | 2025</p>
+                    </a>
+                </div>
+                <div class="movie">
+                    <a href="#">
+                        <div class="movie-image"></div>
+                        <h3>Velocidad Mortal</h3>
+                        <p>Acción | 2024</p>
+                    </a>
+                </div>
+                <div class="movie">
+                    <a href="#">
+                        <div class="movie-image"></div>
+                        <h3>Sueños Dorados</h3>
+                        <p>Romance | 2026</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Cine ISTEA. Todos los derechos reservados.</p>
+    </footer>
+</body>
+
+</html>
