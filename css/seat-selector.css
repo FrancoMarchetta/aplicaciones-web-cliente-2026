@@ -217,10 +217,35 @@
         gap: 0.5rem;
     }
 
+    /* Problema para solucionar despues: */
+    /* el alto del seat-aisle por alguna razon que solo dios conoce hace que no se puedan seleccionar especificamente los asientos 9 */
+    /* todos los demas funcionan menos el 9 */
+    /* misterio absoluto */
     .seat-aisle {
         width: 100%;
-        height: 20px;
+        height: 40px;
     }
+
+    .screen-indicator{
+        rotate: 90deg;
+        transform: translateX(17rem) translateY(-18rem);  
+        width: 80%; 
+    }
+
+    .seat-zone{
+        rotate: 90deg;
+    }
+
+    .seat-label{
+        rotate: -90deg;
+    }
+
+    .seat-aisle{
+        opacity: 0;
+    }
+
+
+
 }
 
 @media (max-width: 480px) {
@@ -242,4 +267,24 @@
         flex-wrap: wrap;
         gap: 1rem;
     }
+
+
+    .screen-indicator{
+        rotate: 90deg;
+        transform: translateX(17rem) translateY(-10rem);  
+        width: 80%; 
+    }
+
+    .seat-zone{
+        rotate: 90deg;
+    }
+
+    .seat-label{
+        rotate: -90deg;
+    }
+
+    .seat-aisle{
+        opacity: 0;
+    }
+
 }
