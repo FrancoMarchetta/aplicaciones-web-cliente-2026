@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cine ISTEA - Entradas de Cine</title>
     <link rel="stylesheet" href="css/styles.css">
+    <script defer src="/js/HeaderController.js"></script>
 </head>
 
 <body>
@@ -13,9 +14,9 @@
         <h1>ISTEA</h1>
         <nav>
             <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Cartelera</a></li>
-                <li><a href="#">Administrar</a></li>
+                <li><a id="header-inicio" href="#">Inicio</a></li>
+                <li><a id="header-cartelera" href="#">Cartelera</a></li>
+                <li><a id="header-administrar" href="#">Administrar</a></li>
             </ul>
         </nav>
     </header>
@@ -50,14 +51,18 @@
                     </a>
                 </div>
                 <div class="movie">
-                    <div class="movie-image"></div>
-                    <h3>Título Película 7</h3>
-                    <p>Género | Duración</p>
+                    <a>
+                        <div class="movie-image"></div>
+                        <h3>Título Película 7</h3>
+                        <p>Género | Duración</p>
+                    </a>
                 </div>
                 <div class="movie">
-                    <div class="movie-image"></div>
-                    <h3>Título Película 8</h3>
-                    <p>Género | Duración</p>
+                    <a>
+                        <div class="movie-image"></div>
+                        <h3>Título Película 8</h3>
+                        <p>Género | Duración</p>
+                    </a>
                 </div>
 
             </div>

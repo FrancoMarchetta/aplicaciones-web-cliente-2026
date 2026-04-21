@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detalle de Película - Cine ISTEA</title>
+    <title>Cine ISTEA</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/movie-detail.css">
 </head>
@@ -14,22 +14,22 @@
         <h1>ISTEA</h1>
         <nav>
             <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="#">Cartelera</a></li>
-                <li><a href="#">Administrar</a></li>
+                <li><a id="header-inicio" href="#">Inicio</a></li>
+                <li><a id="header-cartelera" href="#">Cartelera</a></li>
+                <li><a id="header-administrar" href="#">Administrar</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
         <section class="movie-hero">
-            <img class="movie-hero-bg" 
-                src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=1920" alt="Fondo de película">
-            
+            <img class="movie-hero-bg" src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=1920"
+                alt="Fondo de película">
+
             <div class="movie-hero-content">
-                <img class="movie-poster" 
-                    src="https://images.unsplash.com/photo-1535016120720-40c646be5580?w=400" alt="Póster de película">
-                
+                <img class="movie-poster" src="https://images.unsplash.com/photo-1535016120720-40c646be5580?w=400"
+                    alt="Póster de película">
+
                 <div class="movie-hero-info">
                     <h2>Título de la Película</h2>
                     <p class="movie-genre">Acción | Aventura | Sci-Fi</p>
@@ -43,13 +43,13 @@
                 <div class="movie-description">
                     <h3>Sinopsis</h3>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt 
-                        ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-                        ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt
+                        ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                        ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
                         reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
                     </p>
                 </div>
-                
+
                 <div class="movie-data">
                     <div class="data-item">
                         <span class="data-label">Duración</span>
@@ -73,6 +73,8 @@
                     <div class="date-selection">
                         <h3>Seleccionar Fecha</h3>
                         <div class="date-buttons">
+                            <!-- Recordatorio para mi yo del futuro: -->
+                            <!-- ya hay una clase "active" de css para el button para marcar que opcion esta seleccionada -->
                             <button type="button" class="date-btn">
                                 <span class="date-day">Lun</span>
                                 <span class="date-number">14</span>
@@ -81,7 +83,7 @@
                                 <span class="date-day">Mar</span>
                                 <span class="date-number">15</span>
                             </button>
-                            <button type="button" class="date-btn active">
+                            <button type="button" class="date-btn">
                                 <span class="date-day">Mié</span>
                                 <span class="date-number">16</span>
                             </button>
@@ -107,9 +109,11 @@
                     <div class="time-selection">
                         <h3>Seleccionar Horario</h3>
                         <div class="time-buttons">
+                            <!-- Recordatorio para mi yo del futuro: -->
+                            <!-- ya hay una clase "active" de css para marcar que opcion esta seleccionada -->
                             <button type="button" class="time-btn">14:00</button>
                             <button type="button" class="time-btn">17:00</button>
-                            <button type="button" class="time-btn active">20:00</button>
+                            <button type="button" class="time-btn">20:00</button>
                             <button type="button" class="time-btn">23:00</button>
                         </div>
                     </div>
@@ -119,14 +123,14 @@
                     <h3>Resumen de Reserva</h3>
                     <div class="summary-content">
                         <div class="summary-movie">
-                            <img class="summary-poster" 
+                            <img class="summary-poster"
                                 src="https://images.unsplash.com/photo-1535016120720-40c646be5580?w=100" alt="Póster">
                             <div class="summary-info">
                                 <h4>Título de la Película</h4>
                                 <p>Acción | 120 min</p>
                             </div>
                         </div>
-                        
+
                         <div class="summary-details">
                             <div class="summary-row">
                                 <span class="summary-label">Fecha</span>
