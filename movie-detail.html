@@ -7,6 +7,7 @@
     <title>Cine ISTEA</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/movie-detail.css">
+    <script defer src="/js/HeaderController.js"></script>
 </head>
 
 <body>
@@ -33,7 +34,18 @@
                 <div class="movie-hero-info">
                     <h2>Título de la Película</h2>
                     <p class="movie-genre">Acción | Aventura | Sci-Fi</p>
-                    <p class="movie-rating">⭐ 8.5/10</p>
+
+                    <!-- Tuve que meter el <p> y el svg en un contenedor para que queden alineados -->
+                    <!-- Por eso esta usando un style. Ya se que no es buena practica  -->
+                    <div style="display: flex; align-items: center;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="#ffcc00" class="icon icon-tabler icons-tabler-filled icon-tabler-star">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path
+                                d="M8.243 7.34l-6.38 .925l-.113 .023a1 1 0 0 0 -.44 1.684l4.622 4.499l-1.09 6.355l-.013 .11a1 1 0 0 0 1.464 .944l5.706 -3l5.693 3l.1 .046a1 1 0 0 0 1.352 -1.1l-1.091 -6.355l4.624 -4.5l.078 -.085a1 1 0 0 0 -.633 -1.62l-6.38 -.926l-2.852 -5.78a1 1 0 0 0 -1.794 0l-2.853 5.78z" />
+                        </svg>
+                        <p class="movie-rating">8.5/10</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -150,7 +162,10 @@
                             </div>
                         </div>
 
-                        <button type="button" class="booking-btn">Reservar Asientos</button>
+                        <a href="/seat-selector.html">
+                            <button type="button" class="booking-btn">Reservar Asientos</button>
+                        </a>
+
                     </div>
                 </div>
             </div>
