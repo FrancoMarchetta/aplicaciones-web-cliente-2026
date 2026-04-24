@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <script defer src="/js/HeaderController.js"></script>
+
+    <title>Admin Panel - Cinema Management</title>
+</head>
+
+<body>
+    <header>
+        <h1>ISTEA</h1>
+        <nav>
+            <ul>
+                <li><a id="header-inicio" href="#">Inicio</a></li>
+                <li><a id="header-cartelera" href="#">Cartelera</a></li>
+                <li><a id="header-administrar" href="#">Administrar</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+
+    <main class="main-content">
+        <div class="content-header">
+            <div>
+                <h2>Gestionar peliculas</h2>
+            </div>
+
+            <div style="  display: grid ;gap: 1rem;">
+                <div class="search-box">
+                    <input type="text" placeholder="Search film archives...">
+                </div>
+                <button class="btn-add-movie">Nueva Pelicula</button>
+            </div>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <label>Peliculas totales</label>
+                <div class="value">142</div>
+            </div>
+            <div class="stat-card">
+                <label>peliculas disponibles</label>
+                <div class="value">28</div>
+            </div>
+            <div class="stat-card">
+                <label>Archivados</label>
+                <div class="value">100</div>
+            </div>
+        </div>
+        <div class="table-container">
+            <table class="movie-table">
+                <thead>
+                    <tr>
+                        <th>POSTER</th>
+                        <th>FILM IDENTITY</th>
+                        <th>RELEASE DATE</th>
+                        <th>STATUS</th>
+                        <th>ACTIONS</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="poster-cell">
+                            <div class="poster-placeholder"></div>
+                        </td>
+                        <td>
+                            <div class="film-identity">
+                                <div class="title">Neon Shadows</div>
+                                <span class="genre">Sci-Fi / Thriller</span>
+                                <span class="duration">124m</span>
+                            </div>
+                        </td>
+                        <td>Nov 14, 2024</td>
+                        <td><span class="status-badge active">ACTIVE</span></td>
+                        <td class="actions-cell">
+                            <button class="btn-action">Edit</button>
+                            <button class="btn-action delete">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="poster-cell">
+                            <div class="poster-placeholder"></div>
+                        </td>
+                        <td>
+                            <div class="film-identity">
+                                <div class="title">The Midnight Circuit</div>
+                                <span class="genre">Action</span>
+                                <span class="duration">110m</span>
+                            </div>
+                        </td>
+                        <td>Dec 02, 2024</td>
+                        <td><span class="status-badge inactive">INACTIVE</span></td>
+                        <td class="actions-cell">
+                            <button class="btn-action">Edit</button>
+                            <button class="btn-action delete">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="poster-cell">
+                            <div class="poster-placeholder"></div>
+                        </td>
+                        <td>
+                            <div class="film-identity">
+                                <div class="title">Silent Proscenium</div>
+                                <span class="genre">Drama</span>
+                                <span class="duration">138m</span>
+                            </div>
+                        </td>
+                        <td>Oct 29, 2024</td>
+                        <td><span class="status-badge active">ACTIVE</span></td>
+                        <td class="actions-cell">
+                            <button class="btn-action">Edit</button>
+                            <button class="btn-action delete">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+</body>
+
+</html>
