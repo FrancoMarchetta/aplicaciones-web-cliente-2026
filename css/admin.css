@@ -32,11 +32,13 @@ body {
   font-size: 0.9rem;
   font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: .3s;
+
 }
 
 .btn-add-movie:hover {
   background-color: #b8070f;
+  transform: translateY(-.3rem);
 }
 
 .main-content {
