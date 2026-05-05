@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Movie</title>
+    <link rel="stylesheet" href="css/form.css">
+    <script defer src="/js/HeaderController.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>ISTEA</h1>
+        <nav>
+            <ul>
+                <li><a id="header-inicio" href="#">Inicio</a></li>
+                <li><a id="header-cartelera" href="#">Cartelera</a></li>
+                <li><a id="header-administrar" href="#">Administrar</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="breadcrumb">GESTIÓN DE CINE</div>
+        <h2 class="page-title">Agregar Nueva Película</h2>
+
+        <form id="movie-form">
+            <div class="form-row">
+                <div class="form-section flex-half">
+                    <h3 class="section-title">Metadatos Esenciales</h3>
+                    <div class="form-grid">
+                        <div class="form-group full-width">
+                            <label class="form-label" for="title">Título Oficial</label>
+                            <input type="text" id="title" class="form-input" placeholder="Ej. El Espectáculo Nocturno">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="genre">Categoría de Género</label>
+                            <select id="genre" class="form-select">
+                                <option value="">Seleccionar Género</option>
+                                <option value="action">Acción</option>
+                                <option value="adventure">Aventura</option>
+                                <option value="comedy">Comedia</option>
+                                <option value="drama">Drama</option>
+                                <option value="horror">Terror</option>
+                                <option value="sci-fi">Ciencia Ficción</option>
+                                <option value="thriller">Suspenso</option>
+                                <option value="romance">Romance</option>
+                                <option value="animation">Animación</option>
+                                <option value="documentary">Documental</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="runtime">Duración (Minutos)</label>
+                            <div class="input-with-suffix">
+                                <input type="number" id="runtime" class="form-input" placeholder="120">
+                                <span class="input-suffix">MIN</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="premiere">Fecha de Estreno</label>
+                            <input type="date" id="premiere" class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="director">Crédito Dirección</label>
+                            <input type="text" id="director" class="form-input" placeholder="Nombre Completo">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section flex-half">
+                    <h3 class="section-title">Póster de la Película</h3>
+                    <div class="upload-description">PROPORCIÓN VERTICAL 2:3 RECOMENDADA</div>
+                    <div class="upload-zone" id="upload-zone">
+                        <div class="upload-instruction">Arrastrar Archivo Aquí</div>
+                        <div class="upload-requirements">JPEG, PNG hasta 10MB</div>
+                        <input type="file" name="" id="">
+                    </div>
+                    <div class="upload-actions">
+                        <button type="button" class="btn btn-secondary">VISTA PREVIA</button>
+                        <button type="button" class="btn btn-secondary">ELIMINAR</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3 class="section-title">Narrativa Creativa</h3>
+                <div class="form-grid">
+                    <div class="form-group full-width">
+                        <label class="form-label" for="cast">Reparto Principal (Separado por Comas)</label>
+                        <input type="text" id="cast" class="form-input"
+                            placeholder="Actor Principal, Actriz de Reparto, etc.">
+                    </div>
+                    <div class="form-group full-width">
+                        <label class="form-label" for="synopsis">Sinopsis Oficial</label>
+                        <textarea id="synopsis" class="form-textarea"
+                            placeholder="Describe el viaje cinematográfico..."></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3 class="section-title">Configuración de Publicación</h3>
+                <div class="setting-item">
+                    <div class="setting-info">
+                        <div class="setting-label">Listado Destacado</div>
+                        <div class="setting-description">Mostrar en carrusel principal</div>
+                    </div>
+                    <label class="toggle-switch">
+                        <input type="checkbox" id="featured">
+                        <span class="toggle-slider"></span>
+                    </label>
+                </div>
+                <div class="setting-item">
+                    <div class="setting-info">
+                        <div class="setting-label">Clasificación por Edad</div>
+                        <div class="setting-description">Sensibilidad de contenido</div>
+                    </div>
+                    <select id="age-rating" class="form-select" style="width: 120px;">
+                        <option value="G">Apto todo público</option>
+                        <option value="PG-13">Mayores 13 años</option>
+                        <option value="NC-17">Mayores 18 años</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <button type="button" class="btn btn-discard">Descartar Borrador</button>
+                <button type="submit" class="btn btn-primary">Publicar Película</button>
+            </div>
+        </form>
+    </main>
+
+    <footer>
+        <div class="footer-links">
+            <a href="#">POLÍTICA DE PRIVACIDAD</a>
+            <a href="#">TÉRMINOS DE SERVICIO</a>
+            <a href="#">CONTACTO</a>
+            <a href="#">TRABAJO</a>
+        </div>
+        <div class="footer-copyright">© 2024 DIGITAL PROSCENIUM. TODOS LOS DERECHOS RESERVADOS.</div>
+    </footer>
+</body>
+
+</html>
