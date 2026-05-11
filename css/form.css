@@ -386,16 +386,77 @@ footer {
     .form-grid {
         grid-template-columns: 1fr;
     }
-    
+
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .flex-half {
+        margin-bottom: 1.5rem;
+    }
+
+    .form-row .flex-half:last-child {
+        margin-bottom: 0;
+    }
+
     main {
         padding: 1rem;
     }
-    
+
+    header {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+    }
+
+    nav ul {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
     .form-actions {
         flex-direction: column;
     }
-    
+
     .btn {
         width: 100%;
+    }
+
+    .upload-zone {
+        padding: 2rem 1rem;
+    }
+
+    .setting-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-title {
+        font-size: 1.5rem;
+    }
+
+    .form-section {
+        padding: 1rem;
+    }
+
+    .upload-zone {
+        padding: 1.5rem 0.75rem;
+    }
+
+    .upload-actions {
+        flex-direction: column;
+    }
+
+    footer {
+        padding: 1.5rem 1rem;
+    }
+
+    .footer-links {
+        gap: 1rem;
     }
 }

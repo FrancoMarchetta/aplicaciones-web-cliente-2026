@@ -111,7 +111,7 @@
     transform: none;
 }
 
-.seat-input:checked + .seat-label {
+.seat-input:checked+.seat-label {
     background-color: #e50914;
     color: #ffffff;
 }
@@ -226,21 +226,21 @@
         height: 40px;
     }
 
-    .screen-indicator{
+    .screen-indicator {
         rotate: 90deg;
-        transform: translateX(17rem) translateY(-18rem);  
-        width: 80%; 
+        transform: translateX(17rem) translateY(-18rem);
+        width: 80%;
     }
 
-    .seat-zone{
+    .seat-zone {
         rotate: 90deg;
     }
 
-    .seat-label{
+    .seat-label {
         rotate: -90deg;
     }
 
-    .seat-aisle{
+    .seat-aisle {
         opacity: 0;
     }
 
@@ -248,7 +248,7 @@
 
 }
 
-@media (max-width: 480px) {
+@media (max-width: 425px) {
     .seat-selector {
         padding: 1rem;
     }
@@ -269,21 +269,21 @@
     }
 
 
-    .screen-indicator{
+    .screen-indicator {
         rotate: 90deg;
-        transform: translateX(17rem) translateY(-10rem);  
-        width: 80%; 
+        transform: translateX(17rem) translateY(-10rem);
+        width: 80%;
     }
 
-    .seat-zone{
+    .seat-zone {
         rotate: 90deg;
     }
 
-    .seat-label{
+    .seat-label {
         rotate: -90deg;
     }
 
-    .seat-aisle{
+    .seat-aisle {
         opacity: 0;
     }
 
