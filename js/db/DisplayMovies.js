@@ -14,8 +14,9 @@ function displayMovies($container, limit = null) {
   if (!$container) {
     return;
   }
+  
   let displayedCount = 0;
-  movies.sort();
+  
   for (let movie of movies) {
     if (limit !== null && displayedCount >= limit) break;
     if (movie.visible) {
