@@ -1,7 +1,9 @@
 .movies-container {
-    max-width: 1200px;
+    max-width: 990px;
     margin: 0 auto;
     padding: 1rem 1.5rem;
+    display: grid;
+    justify-items: center;
 }
 
 .filters-bar {
@@ -51,6 +53,27 @@
 .filter-select:focus {
     border-color: #e50914;
     outline: none;
+}
+
+.filter-input {
+    padding: 0.5rem 1rem;
+    background-color: #2a2a2a;
+    border: 1px solid #333;
+    border-radius: 4px;
+    color: #ffffff;
+    font-size: 0.85rem;
+    transition: border-color 0.3s ease;
+}
+
+.filter-input:hover,
+.filter-input:focus {
+    border-color: #e50914;
+    outline: none;
+}
+
+.filter-search {
+    margin-left: 1.5rem;
+    /* Separación moderada en lugar de enviarlo al final */
 }
 
 .movies-grid {

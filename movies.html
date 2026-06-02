@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/movies.css">
     <script defer src="/js/HeaderController.js"></script>
+    <script defer type="module" src="/js/db/DisplayMovies.js"></script>
 </head>
 
 <body>
@@ -54,86 +55,13 @@
                     </select>
                 </div>
 
-                <div class="filter-group">
-                    <label class="filter-title" for="rating">Ordenar por</label>
-                    <select id="rating" class="filter-select">
-                        <option value="populares">Más populares</option>
-                        <option value="menos-populares">Menos populares</option>
-                    </select>
+                <div class="filter-group filter-search">
+                    <input class="filter-input" placeholder="Buscar pelicula" type="text">
                 </div>
             </div>
 
-            <div class="movies-grid">
-                <div class="movie">
-                    <a href="movie-detail.html">
-                        <div class="movie-image"></div>
-                        <h3>El Último Viaje</h3>
-                        <p>Acción | 2025</p>
-                    </a>
-                </div>
-                <div class="movie">
-                    <a href="#">
-                        <div class="movie-image"></div>
-                        <h3>Noches de Luna</h3>
-                        <p>Drama | 2024</p>
-                    </a>
-                </div>
-                <div class="movie">
-                    <a href="#">
-                        <div class="movie-image"></div>
-                        <h3>Código Rojo</h3>
-                        <p>Sci-Fi | 2026</p>
-                    </a>
-                </div>
-                <div class="movie">
-                    <a href="#">
-                        <div class="movie-image"></div>
-                        <h3>Risas al Viento</h3>
-                        <p>Comedia | 2025</p>
-                    </a>
-                </div>
-                <div class="movie">
-                    <a href="#">
-                        <div class="movie-image"></div>
-                        <h3>El Bosque</h3>
-                        <p>Terror | 2025</p>
-                    </a>
-                </div>
-                <div class="movie">
-                    <a href="#">
-                        <div class="movie-image"></div>
-                        <h3>Corazones Rotos</h3>
-                        <p>Romance | 2024</p>
-                    </a>
-                </div>
-                <div class="movie">
-                    <a href="#">
-                        <div class="movie-image"></div>
-                        <h3>Resistencia</h3>
-                        <p>Acción | 2026</p>
-                    </a>
-                </div>
-                <div class="movie">
-                    <a href="#">
-                        <div class="movie-image"></div>
-                        <h3>Enigmas</h3>
-                        <p>Drama | 2025</p>
-                    </a>
-                </div>
-                <div class="movie">
-                    <a href="#">
-                        <div class="movie-image"></div>
-                        <h3>Velocidad Mortal</h3>
-                        <p>Acción | 2024</p>
-                    </a>
-                </div>
-                <div class="movie">
-                    <a href="#">
-                        <div class="movie-image"></div>
-                        <h3>Sueños Dorados</h3>
-                        <p>Romance | 2026</p>
-                    </a>
-                </div>
+            <div id="movies-grid" class="movies-grid">
+                <!-- cargo las peliculas desde DisplayMovies.js -->
             </div>
         </div>
     </main>
