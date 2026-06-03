@@ -116,12 +116,15 @@ body {
   background-color: var(--bg-surface);
   border-radius: 8px;
   border: 1px solid var(--border);
-  overflow: hidden;
+  overflow-x: auto;
+  scrollbar-width: none;
+
 }
 
 .movie-table {
   width: 100%;
   border-collapse: collapse;
+  
 }
 
 .movie-table th {
@@ -133,13 +136,20 @@ body {
   text-align: left;
   padding: 1rem 1.25rem;
   border-bottom: 1px solid var(--border);
+  
 }
 
 .movie-table td {
   padding: 1rem 1.25rem;
   border-bottom: 1px solid var(--border);
   font-size: 0.9rem;
+  max-width: 250px;
+  white-space: nowrap;
+  overflow-x: auto;
+  scrollbar-width: none;
 }
+
+
 
 .movie-table tr:last-child td {
   border-bottom: none;
@@ -203,6 +213,7 @@ body {
 
 .actions-cell {
   gap: 0.5rem;
+  /* width: 10rem; */
 }
 
 .btn-action {
@@ -292,10 +303,6 @@ body {
 
   .search-box input {
     width: 100%;
-  }
-
-  .table-container {
-    overflow-x: auto;
   }
 
   .movie-table {
