@@ -13,10 +13,9 @@ let $moviesContainer = document.getElementById("movies-grid");
 function displayMovies($container, limit = null) {
   if (!$container) {
     return;
-  }
-  
+  }  
   let displayedCount = 0;
-  
+
   for (let movie of movies) {
     if (limit !== null && displayedCount >= limit) break;
     if (movie.visible) {
@@ -37,5 +36,9 @@ function displayMovies($container, limit = null) {
   }
 }
 
+
+
+
 displayMovies($homePageMovieContainer, 3);
 displayMovies($moviesContainer);
+
