@@ -11,10 +11,12 @@ export async function fetchData() {
     );
     let data = await response.json();
     return data;
-    console.log(data);
+    // console.log(data);
   } catch (error) {
-    console.log(`error ${error}`);
+    console.error(`error ${error}`);
     return [];
   }
 }
+
+
 

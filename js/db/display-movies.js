@@ -1,7 +1,7 @@
-import { fetchData } from "/js/db/DataBaseMethods.js";
+import { fetchData } from "/js/db/supabase-client.js";
 
 let movies = await fetchData();
-console.log(movies);
+console.table(movies);
 
 // contenedor en Home page
 let $homePageMovieContainer = document.getElementById(
@@ -13,7 +13,7 @@ let $moviesContainer = document.getElementById("movies-grid");
 function displayMovies($container, limit = null) {
   if (!$container) {
     return;
-  }  
+  }
   let displayedCount = 0;
 
   for (let movie of movies) {
@@ -24,7 +24,7 @@ function displayMovies($container, limit = null) {
         `
         <div class="movie">
         <a href="/movie-detail.html?id=${movie.id}">
-        <img class="movie-image" src="${"https://i.blogs.es/c7ed10/screenshot_90/1366_2000.webp"}" alt="${movie.titulo}">
+        <img loading="lazy" class="movie-image" src="${"https://i.blogs.es/c7ed10/screenshot_90/1366_2000.webp"}" alt="${movie.titulo}">
         <h3>${movie.titulo}</h3>
         <p>${movie.genero} | ${movie.duracion} min</p>
         </a>
@@ -36,9 +36,5 @@ function displayMovies($container, limit = null) {
   }
 }
 
-
-
-
 displayMovies($homePageMovieContainer, 3);
 displayMovies($moviesContainer);
-
