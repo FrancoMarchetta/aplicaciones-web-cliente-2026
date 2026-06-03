@@ -2,6 +2,8 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 1rem 1.5rem;
+    display: grid;
+    justify-items: center;
 }
 
 .filters-bar {
@@ -53,6 +55,35 @@
     outline: none;
 }
 
+.filter-input {
+    padding: 0.5rem 1rem 0.5rem 2.5rem;
+    background-color: #2a2a2a;
+    border: 1px solid #333;
+    border-radius: 4px;
+    color: #ffffff;
+    font-size: 0.85rem;
+    transition: border-color 0.3s ease;
+}
+
+.filter-input:hover,
+.filter-input:focus {
+    border-color: #e50914;
+    outline: none;
+}
+
+.filter-search {
+    position: relative;
+    margin-left: 1.5rem;
+    /* Separación moderada en lugar de enviarlo al final */
+}
+
+.search-icon {
+    position: absolute;
+    left: 12px;
+    color: #888;
+    pointer-events: none;
+}
+
 .movies-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -72,14 +103,6 @@
     box-shadow: 0 8px 20px rgba(229, 9, 20, 0.2);
 }
 
-.movie-image {
-    width: 100%;
-    height: 220px;
-    background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
 .movie h3 {
     padding: 0.5rem 0.5rem 0.25rem;
