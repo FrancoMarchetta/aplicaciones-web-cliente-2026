@@ -6,6 +6,7 @@ export async function getMovies() {
       method: "GET",
       headers: {
         apikey: SUPABASE_API_KEY,
+        Authorization: `Bearer ${SUPABASE_API_KEY}`,
       },
     });
     let data = await response.json();
@@ -34,18 +35,3 @@ export async function postMovie(movieInfo) {
     console.error("error al subir usuario " + error);
   }
 }
-
-// let exampleObject = {
-//   titulo: "El Padrino",
-//   genero: "Crimen, Drama",
-//   duracion: 120,
-//   fecha_estreno: "1972-03-24",
-//   director: "Francis Ford Coppola",
-//   reparto: "Marlon Brando, Al Pacino, James Caan",
-//   sinopsis:
-//     "La historia de la familia Corleone, una de las más poderosas familias mafiosas de Nueva York, y su lucha por mantener su poder y proteger a sus seres queridos.",
-//   clasificacion: "R",
-//   visible: true,
-// };
-
-// postMovie(exampleObject);

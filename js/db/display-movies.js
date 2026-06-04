@@ -2,7 +2,8 @@ import { getMovies } from "/js/db/supabase-client.js";
 
 let movies = await getMovies();
 console.table(movies);
-
+//----------------------------------------------------------------------------
+//**************************contenedores:*************************************
 // contenedor en Home page
 let $homePageMovieContainer = document.getElementById(
   "home-page-movies-container",
@@ -10,6 +11,7 @@ let $homePageMovieContainer = document.getElementById(
 //contenedor en pagina de cartelera
 let $moviesContainer = document.getElementById("movies-grid");
 
+//----------------------------------------------------------------------------
 function displayMovies($container, limit = null) {
   if (!$container) {
     return;
@@ -38,3 +40,34 @@ function displayMovies($container, limit = null) {
 
 displayMovies($homePageMovieContainer, 3);
 displayMovies($moviesContainer);
+
+function displayAdminPanel($tableContainer) {
+  if (!$tableContainer) return;
+  $tableContainer.innerHTML = "";
+  for (let movie of movies) {
+    $tableContainer.insertAdjacentHTML(
+      "beforeend",
+      `
+        <tr>
+          <td class="poster-cell">
+            <div class="poster-placeholder"></div>
+          </td>
+          <td>${movie.titulo}</td>
+          <td>${movie.genero}</td>
+          <td>${movie.fecha_estreno}</td>
+          <td>${movie.director}</td>
+          <td>${movie.reparto}</td>
+          <td>${movie.sinopsis}</td>
+          <td>${movie.clasificacion}</td>
+          <td><span class="status-badge ${movie.visible ? "active" : "inactive"}">${movie.visible}</span></td>
+          <td class="actions-cell">
+            <button class="btn-action">Edit</button>
+            <button class="btn-action delete">Delete</button>
+          </td>
+        </tr>
+      `,
+    );
+  }
+}
+
+displayAdminPanel(document.querySelector(".table-container tbody"));
