@@ -1,6 +1,6 @@
-import { fetchData } from "/js/db/supabase-client.js";
+import { getMovies } from "/js/db/supabase-client.js";
 
-let movies = await fetchData();
+let movies = await getMovies();
 console.table(movies);
 
 // contenedor en Home page
