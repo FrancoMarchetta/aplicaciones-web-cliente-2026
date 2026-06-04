@@ -7,6 +7,7 @@
     <title>Add New Movie</title>
     <link rel="stylesheet" href="css/form.css">
     <script defer src="/js/header-controller.js"></script>
+    <script defer type="module" src="/js/db/upload-data.js"></script>
 </head>
 
 <body>
@@ -97,7 +98,7 @@
                 </div>
             </div>
 
-            
+
             <div class="form-section">
                 <h3 class="section-title">Configuración de Publicación</h3>
                 <div class="setting-item">
@@ -106,7 +107,7 @@
                         <div class="setting-description">Mostrar en la Cartelera o esconder del publico</div>
                     </div>
                     <label class="toggle-switch">
-                        <input type="checkbox" id="featured">
+                        <input type="checkbox" id="isVisible">
                         <span class="toggle-slider"></span>
                     </label>
                 </div>
