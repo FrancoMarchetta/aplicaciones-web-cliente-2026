@@ -159,18 +159,15 @@ body {
   background-color: rgba(255, 255, 255, 0.02);
 }
 
-.hidden {
-  display: none !important;
+dialog {
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: auto;
 }
 
-.modal-overlay {
-  position: fixed;
-  inset: 0;
+dialog::backdrop {
   background-color: rgba(0, 0, 0, 0.6);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
 }
 
 .modal-box {
@@ -186,6 +183,7 @@ body {
 .modal-box h3 {
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
+  color: #e50914;
 }
 
 .modal-box p {

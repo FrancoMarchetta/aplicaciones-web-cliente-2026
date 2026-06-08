@@ -1,4 +1,4 @@
-import { getMovies } from "/js/db/supabase-client.js";
+import { getMovies, deleteMovie } from "/js/db/supabase-client.js";
 
 let movies = await getMovies();
 console.table(movies);
@@ -83,37 +83,39 @@ let movieIdToDelete = null;
 function openDeleteModal(id, title) {
   movieIdToDelete = id;
   $modalTitle.textContent = title;
-  $modal.classList.remove("hidden");
+  $modal.showModal();
 }
 
 function closeDeleteModal() {
   movieIdToDelete = null;
-  $modal.classList.add("hidden");
+  $modal.close();
 }
 
-document.querySelector(".table-container tbody").addEventListener("click", (e) => {
-  const deleteBtn = e.target.closest(".btn-action.delete");
-  if (!deleteBtn) return;
+document
+  .querySelector(".table-container tbody")
+  .addEventListener("click", (e) => {
+    const deleteBtn = e.target.closest(".btn-action.delete");
+    if (!deleteBtn) return;
 
-  const row = deleteBtn.closest("tr");
-  const title = row.children[1]?.textContent ?? "";
-  const id = row.dataset.id;
+    const row = deleteBtn.closest("tr");
+    const title = row.children[1]?.textContent ?? "";
+    const id = row.dataset.id;
 
-  openDeleteModal(id, title);
-});
+    openDeleteModal(id, title);
+  });
 
-$modalConfirm.addEventListener("click", () => {
+$modalConfirm.addEventListener("click", async () => {
   if (movieIdToDelete !== null) {
-    // TODO: conectar con deleteMovie(id) de supabase-client.js
-    // import { deleteMovie } from "/js/db/supabase-client.js";
-    // await deleteMovie(movieIdToDelete);
-    console.log("Eliminar película id:", movieIdToDelete);
+    await deleteMovie(movieIdToDelete);
+    const row = document.querySelector(`tr[data-id="${movieIdToDelete}"]`);
+    if (row) row.remove(); // para quitar la pelicula de la lista sin recargar la pagina
   }
   closeDeleteModal();
 });
 
 $modalCancel.addEventListener("click", closeDeleteModal);
 
-$modal.addEventListener("click", (e) => {
-  if (e.target === $modal) closeDeleteModal();
-});
+// dejo comentado por las dudas pero esto mismo lo puedo hacer agregando colsedby="any" en el <dialog/>
+// $modal.addEventListener("click", (e) => {
+//   if (e.target === $modal) closeDeleteModal();
+// });

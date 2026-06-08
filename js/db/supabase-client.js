@@ -17,6 +17,22 @@ export async function getMovies() {
   }
 }
 
+export async function deleteMovie(id) {
+  try {
+    let response = await fetch(`${SUPABASE_URL}?id=eq.${id}`, {
+      method: "DELETE",
+      headers: {
+        apikey: SUPABASE_API_KEY,
+        Authorization: `Bearer ${SUPABASE_API_KEY}`,
+      },
+    });
+    if (!response.ok) throw new Error("Error al eliminar");
+    console.log("Película eliminada:", id);
+  } catch (error) {
+    console.error("error al eliminar película", error);
+  }
+}
+
 export async function postMovie(movieInfo) {
   try {
     let response = await fetch(SUPABASE_URL, {
@@ -35,3 +51,5 @@ export async function postMovie(movieInfo) {
     console.error("error al subir usuario " + error);
   }
 }
+
+
