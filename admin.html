@@ -73,79 +73,22 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td class="poster-cell">
-                            <div class="poster-placeholder"></div>
-                        </td>
-                        <td>Neon Shadows</td>
-                        <td>Sci-Fi / Thriller</td>
-                        <td>Nov 14, 2024</td>
-                        <td>John Doe</td>
-                        <td>Actor A, Actor B actor</td>
-                        <td>Una sombra en el futuro...</td>
-                        <td>+13</td>
-                        <td><span class="status-badge active ">true</span></td>
-                        <td class="actions-cell">
-                            <button class="btn-action">Edit</button>
-                            <button class="btn-action delete">Delete</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="poster-cell">
-                            <div class="poster-placeholder"></div>
-                        </td>
-                        <td>The Midnight Circuit</td>
-                        <td>Action</td>
-                        <td>Dec 02, 2024</td>
-                        <td>Jane Smith</td>
-                        <td>Actor C, Actor D</td>
-                        <td>Carreras nocturnas...</td>
-                        <td>+18</td>
-                        <td><span class="status-badge inactive">false</span></td>
-                        <td class="actions-cell">
-                            <button class="btn-action">Edit</button>
-                            <button class="btn-action delete">Delete</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="poster-cell">
-                            <div class="poster-placeholder"></div>
-                        </td>
-                        <td>Silent Proscenium</td>
-                        <td>Drama</td>
-                        <td>Oct 29, 2024</td>
-                        <td>Robert Brown</td>
-                        <td>Actor E, Actor F</td>
-                        <td>El teatro del silencio...</td>
-                        <td>ATP</td>
-                        <td><span class="status-badge active">true</span></td>
-                        <td class="actions-cell">
-                            <button class="btn-action">Edit</button>
-                            <button class="btn-action delete">Delete</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="poster-cell">
-                            <div class="poster-placeholder"></div>
-                        </td>
-                        <td>The Galactic Chronicles of the Lost Empire: A New Hope and Beyond (Ultimate Director's Cut Edition)</td>
-                        <td>Action, Adventure, Sci-Fi, Fantasy, Thriller, Mystery, Drama, Epic</td>
-                        <td>Jan 15, 2025</td>
-                        <td>Christopher Nolan III, Steven Spielberg Jr., Quentin Tarantino Sr.</td>
-                        <td>Leonardo DiCaprio, Scarlett Johansson, Morgan Freeman, Tom Hanks, Meryl Streep, Robert De Niro, Al Pacino, Viola Davis, Christian Bale</td>
-                        <td>En un futuro distópico donde los recursos son escasos y la humanidad ha colonizado varios sistemas solares, un joven agricultor de un planeta remoto descubre un antiguo artefacto alienígena que contiene el mapa hacia la mítica Tierra. Perseguido por una corporación intergaláctica implacable y liderando un grupo dispar de rebeldes, deberá cruzar agujeros de gusano y enfrentar peligros inimaginables para salvar lo que queda de la civilización antes de que el sol de su sistema colapse en una supernova destructora de mundos.</td>
-                        <td>+13</td>
-                        <td><span class="status-badge active">true</span></td>
-                        <td class="actions-cell">
-                            <button class="btn-action">Edit</button>
-                            <button class="btn-action delete">Delete</button>
-                        </td>
-                    </tr>
+                    <!-- Peliculas se cargan en display-movies.js -->
                 </tbody>
             </table>
         </div>
     </main>
 
+<div id="deleteModal" class="modal-overlay hidden">
+    <div class="modal-box">
+      <h3>¿Eliminar película?</h3>
+      <p id="modalMovieTitle"></p>
+      <div class="modal-actions">
+        <button id="modalCancelBtn" class="btn-modal cancel">Cancelar</button>
+        <button id="modalConfirmBtn" class="btn-modal confirm">Eliminar</button>
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>

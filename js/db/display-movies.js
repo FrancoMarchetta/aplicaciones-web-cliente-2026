@@ -48,7 +48,7 @@ function displayAdminPanel($tableContainer) {
     $tableContainer.insertAdjacentHTML(
       "beforeend",
       `
-        <tr>
+        <tr data-id="${movie.id}">
           <td class="poster-cell">
             <div class="poster-placeholder"></div>
           </td>
@@ -71,3 +71,49 @@ function displayAdminPanel($tableContainer) {
 }
 
 displayAdminPanel(document.querySelector(".table-container tbody"));
+
+// ---- Modal de confirmación para eliminar película ----
+const $modal = document.getElementById("deleteModal");
+const $modalTitle = document.getElementById("modalMovieTitle");
+const $modalConfirm = document.getElementById("modalConfirmBtn");
+const $modalCancel = document.getElementById("modalCancelBtn");
+
+let movieIdToDelete = null;
+
+function openDeleteModal(id, title) {
+  movieIdToDelete = id;
+  $modalTitle.textContent = title;
+  $modal.classList.remove("hidden");
+}
+
+function closeDeleteModal() {
+  movieIdToDelete = null;
+  $modal.classList.add("hidden");
+}
+
+document.querySelector(".table-container tbody").addEventListener("click", (e) => {
+  const deleteBtn = e.target.closest(".btn-action.delete");
+  if (!deleteBtn) return;
+
+  const row = deleteBtn.closest("tr");
+  const title = row.children[1]?.textContent ?? "";
+  const id = row.dataset.id;
+
+  openDeleteModal(id, title);
+});
+
+$modalConfirm.addEventListener("click", () => {
+  if (movieIdToDelete !== null) {
+    // TODO: conectar con deleteMovie(id) de supabase-client.js
+    // import { deleteMovie } from "/js/db/supabase-client.js";
+    // await deleteMovie(movieIdToDelete);
+    console.log("Eliminar película id:", movieIdToDelete);
+  }
+  closeDeleteModal();
+});
+
+$modalCancel.addEventListener("click", closeDeleteModal);
+
+$modal.addEventListener("click", (e) => {
+  if (e.target === $modal) closeDeleteModal();
+});
