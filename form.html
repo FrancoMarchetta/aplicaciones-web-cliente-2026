@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add New Movie</title>
     <link rel="stylesheet" href="css/form.css">
-    <script defer src="/js/HeaderController.js"></script>
+    <script defer src="/js/header-controller.js"></script>
+    <script defer type="module" src="/js/db/upload-data.js"></script>
 </head>
 
 <body>
@@ -97,6 +98,7 @@
                 </div>
             </div>
 
+
             <div class="form-section">
                 <h3 class="section-title">Configuración de Publicación</h3>
                 <div class="setting-item">
@@ -105,7 +107,7 @@
                         <div class="setting-description">Mostrar en la Cartelera o esconder del publico</div>
                     </div>
                     <label class="toggle-switch">
-                        <input type="checkbox" id="featured">
+                        <input type="checkbox" id="isVisible">
                         <span class="toggle-slider"></span>
                     </label>
                 </div>
@@ -115,9 +117,9 @@
                         <div class="setting-description">Sensibilidad de contenido</div>
                     </div>
                     <select id="age-rating" class="form-select" style="width: 120px;">
-                        <option value="G">Apto todo público</option>
+                        <option value="ATP">Apto todo público</option>
                         <option value="PG-13">Mayores 13 años</option>
-                        <option value="NC-17">Mayores 18 años</option>
+                        <option value="PG-18">Mayores 18 años</option>
                     </select>
                 </div>
             </div>

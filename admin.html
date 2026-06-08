@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/admin.css">
-    <script defer src="/js/HeaderController.js"></script>
+    <script defer src="/js/header-controller.js"></script>
+    <script defer type="module" src="/js/db/display-movies.js"></script>
 
     <title>Admin Panel - Cinema Management</title>
 </head>
@@ -60,72 +61,34 @@
                 <thead>
                     <tr>
                         <th>POSTER</th>
-                        <th>FILM IDENTITY</th>
-                        <th>RELEASE DATE</th>
-                        <th>STATUS</th>
-                        <th>ACTIONS</th>
+                        <th>NOMBRE</th>
+                        <th>GÉNERO</th>
+                        <th>ESTRENO</th>
+                        <th>DIRECTOR</th>
+                        <th>REPARTO</th>
+                        <th>SINOPSIS</th>
+                        <th>CLASIFICACIÓN</th>
+                        <th>VISIBILIDAD</th>
+                        <th>ACCIONES</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td class="poster-cell">
-                            <div class="poster-placeholder"></div>
-                        </td>
-                        <td>
-                            <div class="film-identity">
-                                <div class="title">Neon Shadows</div>
-                                <span class="genre">Sci-Fi / Thriller</span>
-                                <span class="duration">124m</span>
-                            </div>
-                        </td>
-                        <td>Nov 14, 2024</td>
-                        <td><span class="status-badge active">ACTIVE</span></td>
-                        <td class="actions-cell">
-                            <button class="btn-action">Edit</button>
-                            <button class="btn-action delete">Delete</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="poster-cell">
-                            <div class="poster-placeholder"></div>
-                        </td>
-                        <td>
-                            <div class="film-identity">
-                                <div class="title">The Midnight Circuit</div>
-                                <span class="genre">Action</span>
-                                <span class="duration">110m</span>
-                            </div>
-                        </td>
-                        <td>Dec 02, 2024</td>
-                        <td><span class="status-badge inactive">INACTIVE</span></td>
-                        <td class="actions-cell">
-                            <button class="btn-action">Edit</button>
-                            <button class="btn-action delete">Delete</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="poster-cell">
-                            <div class="poster-placeholder"></div>
-                        </td>
-                        <td>
-                            <div class="film-identity">
-                                <div class="title">Silent Proscenium</div>
-                                <span class="genre">Drama</span>
-                                <span class="duration">138m</span>
-                            </div>
-                        </td>
-                        <td>Oct 29, 2024</td>
-                        <td><span class="status-badge active">ACTIVE</span></td>
-                        <td class="actions-cell">
-                            <button class="btn-action">Edit</button>
-                            <button class="btn-action delete">Delete</button>
-                        </td>
-                    </tr>
+                    <!-- Peliculas se cargan en display-movies.js -->
                 </tbody>
             </table>
         </div>
     </main>
 
+    <dialog closedby="any" id="deleteModal">
+        <div class="modal-box">
+            <h3>¿Eliminar película?</h3>
+            <p id="modalMovieTitle"></p>
+            <div class="modal-actions">
+                <button id="modalCancelBtn" class="btn-modal cancel">Cancelar</button>
+                <button id="modalConfirmBtn" class="btn-modal confirm">Eliminar</button>
+            </div>
+        </div>
+    </dialog>
 </body>
 
 </html>

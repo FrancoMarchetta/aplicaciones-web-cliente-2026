@@ -116,12 +116,15 @@ body {
   background-color: var(--bg-surface);
   border-radius: 8px;
   border: 1px solid var(--border);
-  overflow: hidden;
+  overflow-x: auto;
+  scrollbar-width: none;
+
 }
 
 .movie-table {
   width: 100%;
   border-collapse: collapse;
+  
 }
 
 .movie-table th {
@@ -133,13 +136,20 @@ body {
   text-align: left;
   padding: 1rem 1.25rem;
   border-bottom: 1px solid var(--border);
+  
 }
 
 .movie-table td {
   padding: 1rem 1.25rem;
   border-bottom: 1px solid var(--border);
   font-size: 0.9rem;
+  max-width: 250px;
+  white-space: nowrap;
+  overflow-x: auto;
+  scrollbar-width: none;
 }
+
+
 
 .movie-table tr:last-child td {
   border-bottom: none;
@@ -147,6 +157,75 @@ body {
 
 .movie-table tr:hover {
   background-color: rgba(255, 255, 255, 0.02);
+}
+
+dialog {
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: auto;
+}
+
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-box {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 2rem;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+}
+
+.modal-box h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #e50914;
+}
+
+.modal-box p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+.btn-modal {
+  padding: 0.5rem 1.25rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s;
+}
+
+.btn-modal.cancel {
+  background-color: transparent;
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+}
+
+.btn-modal.cancel:hover {
+  border-color: var(--text);
+  color: var(--text);
+}
+
+.btn-modal.confirm {
+  background-color: var(--accent);
+  color: var(--text);
+}
+
+.btn-modal.confirm:hover {
+  background-color: #b8070f;
 }
 
 .poster-cell {
@@ -203,6 +282,7 @@ body {
 
 .actions-cell {
   gap: 0.5rem;
+  /* width: 10rem; */
 }
 
 .btn-action {
@@ -292,10 +372,6 @@ body {
 
   .search-box input {
     width: 100%;
-  }
-
-  .table-container {
-    overflow-x: auto;
   }
 
   .movie-table {
