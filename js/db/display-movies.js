@@ -60,7 +60,7 @@ function displayAdminPanel($tableContainer) {
           <td>${movie.reparto}</td>
           <td>${movie.sinopsis}</td>
           <td>${movie.clasificacion}</td>
-          <td><span class="status-badge ${movie.visible ? "active" : "inactive"}">${movie.visible}</span></td>
+          <td><span class="status-badge ${movie.visible ? "active" : "inactive"}">${movie.visible ? "visible" : "oculto"}</span></td>
           <td class="actions-cell">
             <button class="btn-action">Edit</button>
             <button class="btn-action delete">Delete</button>
@@ -72,3 +72,13 @@ function displayAdminPanel($tableContainer) {
 }
 
 displayAdminPanel(document.querySelector(".table-container tbody"));
+
+document
+  .querySelector(".table-container tbody")
+  ?.addEventListener("click", (e) => {
+    const editBtn = e.target.closest(".btn-action:not(.delete)");
+    if (!editBtn) return;
+    const row = editBtn.closest("tr");
+    const id = row.dataset.id;
+    window.location.href = `/form.html?id=${id}`;
+  });
