@@ -4,6 +4,7 @@ const $modal = document.getElementById("deleteModal");
 const $modalTitle = document.getElementById("modalMovieTitle");
 const $modalConfirm = document.getElementById("modalConfirmBtn");
 const $modalCancel = document.getElementById("modalCancelBtn");
+const $tbody = document.querySelector(".table-container tbody");
 
 let movieIdToDelete = null;
 
@@ -17,10 +18,8 @@ function closeDeleteModal() {
   movieIdToDelete = null;
   $modal.close();
 }
-
-document
-  .querySelector(".table-container tbody")
-  .addEventListener("click", (e) => {
+if ($tbody) {
+  $tbody.addEventListener("click", (e) => {
     const deleteBtn = e.target.closest(".btn-action.delete");
     if (!deleteBtn) return;
 
@@ -30,17 +29,22 @@ document
 
     openDeleteModal(id, title);
   });
+}
 
-$modalConfirm.addEventListener("click", async () => {
-  if (movieIdToDelete !== null) {
-    await deleteMovie(movieIdToDelete);
-    const row = document.querySelector(`tr[data-id="${movieIdToDelete}"]`);
-    if (row) row.remove();
-  }
-  closeDeleteModal();
-});
+if ($modalConfirm) {
+  $modalConfirm.addEventListener("click", async () => {
+    if (movieIdToDelete !== null) {
+      await deleteMovie(movieIdToDelete);
+      const row = document.querySelector(`tr[data-id="${movieIdToDelete}"]`);
+      if (row) row.remove();
+    }
+    closeDeleteModal();
+  });
+}
 
-$modalCancel.addEventListener("click", closeDeleteModal);
+if ($modalCancel) {
+  $modalCancel.addEventListener("click", closeDeleteModal);
+}
 
 // dejo comentado por las dudas pero esto mismo lo puedo hacer agregando colsedby="any" en el <dialog/>
 // $modal.addEventListener("click", (e) => {
