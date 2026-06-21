@@ -1,8 +1,8 @@
 import { getMovies } from "/js/db/supabase-client.js";
 import "/js/db/delete-modal.js";
+import { setupFilters } from "/js/db/filters.js";
 
 let movies = await getMovies();
-console.table(movies);
 //----------------------------------------------------------------------------
 //**************************contenedores:*************************************
 // contenedor en Home page
@@ -13,6 +13,25 @@ let $homePageMovieContainer = document.getElementById(
 let $moviesContainer = document.getElementById("movies-grid");
 
 //----------------------------------------------------------------------------
+function renderMoviesGrid($container, moviesToRender) {
+  if (!$container) return;
+  $container.innerHTML = "";
+  for (let movie of moviesToRender) {
+    $container.insertAdjacentHTML(
+      "beforeend",
+      `
+      <div class="movie">
+      <a href="/movie-detail.html?id=${movie.id}">
+      <img loading="lazy" class="movie-image" src="${"https://i.blogs.es/c7ed10/screenshot_90/1366_2000.webp"}" alt="${movie.titulo}">
+      <h3>${movie.titulo}</h3>
+      <p>${movie.genero} | ${movie.duracion} min</p>
+      </a>
+      </div>
+      `,
+    );
+  }
+}
+
 function displayMovies($container, limit = null) {
   if (!$container) {
     return;
@@ -40,7 +59,10 @@ function displayMovies($container, limit = null) {
 }
 
 displayMovies($homePageMovieContainer, 3);
-displayMovies($moviesContainer);
+
+if ($moviesContainer) {
+  setupFilters(movies, (filtered) => renderMoviesGrid($moviesContainer, filtered));
+}
 
 function displayAdminPanel($tableContainer) {
   if (!$tableContainer) return;
