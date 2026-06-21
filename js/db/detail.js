@@ -19,5 +19,6 @@ document.getElementById("detail-duration").textContent =
 document.getElementById("detail-director").textContent = movie.director;
 document.getElementById("detail-cast").textContent = movie.reparto;
 document.getElementById("detail-summary-title").textContent = movie.titulo;
+localStorage.setItem("selectedMovieTitle", movie.titulo);
 document.getElementById("detail-summary-info").textContent =
   `${movie.genero} | ${movie.duracion} min`;
