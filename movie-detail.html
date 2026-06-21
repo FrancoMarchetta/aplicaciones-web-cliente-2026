@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/movie-detail.css">
     <script defer src="/js/header-controller.js"></script>
+    <script defer type="module" src="/js/db/detail.js"></script>
 </head>
 
 
@@ -23,8 +24,8 @@
             </ul>
         </nav>
     </header>
-    
-    
+
+
 
     <main>
         <section class="movie-hero">
@@ -36,8 +37,8 @@
                     alt="Póster de película">
 
                 <div class="movie-hero-info">
-                    <h2>Título de la Película</h2>
-                    <p class="movie-genre">Acción | Aventura | Sci-Fi</p>
+                    <h2 id="detail-title">Título de la Película</h2>
+                    <p id="detail-genre" class="movie-genre">Acción | Aventura | Sci-Fi</p>
 
                     <!-- Tuve que meter el <p> y el svg en un contenedor para que queden alineados -->
                     <!-- Por eso esta usando un style. Ya se que no es buena practica  -->
@@ -48,7 +49,7 @@
                             <path
                                 d="M8.243 7.34l-6.38 .925l-.113 .023a1 1 0 0 0 -.44 1.684l4.622 4.499l-1.09 6.355l-.013 .11a1 1 0 0 0 1.464 .944l5.706 -3l5.693 3l.1 .046a1 1 0 0 0 1.352 -1.1l-1.091 -6.355l4.624 -4.5l.078 -.085a1 1 0 0 0 -.633 -1.62l-6.38 -.926l-2.852 -5.78a1 1 0 0 0 -1.794 0l-2.853 5.78z" />
                         </svg>
-                        <p class="movie-rating">8.5/10</p>
+                        <p id="detail-rating" class="movie-rating">8.5/10</p>
                     </div>
                 </div>
             </div>
@@ -58,7 +59,7 @@
             <div class="movie-info-grid">
                 <div class="movie-description">
                     <h3>Sinopsis</h3>
-                    <p>
+                    <p id="detail-synopsis">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt
                         ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                         ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
@@ -69,15 +70,15 @@
                 <div class="movie-data">
                     <div class="data-item">
                         <span class="data-label">Duración</span>
-                        <span class="data-value">120 min</span>
+                        <span id="detail-duration" class="data-value">120 min</span>
                     </div>
                     <div class="data-item">
                         <span class="data-label">Director</span>
-                        <span class="data-value">Nombre Director</span>
+                        <span id="detail-director" class="data-value">Nombre Director</span>
                     </div>
                     <div class="data-item">
                         <span class="data-label">Elenco</span>
-                        <span class="data-value">Actor 1, Actor 2, Actor 3, Actor 4</span>
+                        <span id="detail-cast" class="data-value">Actor 1, Actor 2, Actor 3, Actor 4</span>
                     </div>
                 </div>
             </div>
@@ -142,8 +143,8 @@
                             <img class="summary-poster"
                                 src="https://images.unsplash.com/photo-1535016120720-40c646be5580?w=100" alt="Póster">
                             <div class="summary-info">
-                                <h4>Título de la Película</h4>
-                                <p>Acción | 120 min</p>
+                                <h4 id="detail-summary-title">Título de la Película</h4>
+                                <p id="detail-summary-info">Acción | 120 min</p>
                             </div>
                         </div>
 

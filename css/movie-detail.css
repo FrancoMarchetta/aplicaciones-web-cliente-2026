@@ -25,14 +25,14 @@
     gap: 2rem;
     padding: 2rem;
     width: 100%;
-    background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.6) 50%, transparent 100%);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.6) 50%, transparent 100%);
     align-items: flex-end;
 }
 
 .movie-poster {
     width: 180px;
     border-radius: 8px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
     flex-shrink: 0;
 }
 
@@ -76,6 +76,11 @@
     margin: 0 auto;
 }
 
+.movie-description {
+    overflow: scroll;
+    scrollbar-width: none;
+}
+
 .movie-description h3 {
     color: #e50914;
     font-size: 1.2rem;
@@ -88,6 +93,11 @@
     color: #aaaaaa;
     font-size: 1rem;
     line-height: 1.6;
+    /* border: solid red; */
+    width: 60%;
+    overflow: scroll;
+    scrollbar-width: none;
+
 }
 
 .movie-data {
