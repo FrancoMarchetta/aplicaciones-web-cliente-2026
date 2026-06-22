@@ -3,6 +3,18 @@ import "/js/db/delete-modal.js";
 import { setupFilters } from "/js/db/filters.js";
 
 let movies = await getMovies();
+
+const heroMovie = movies.find((m) => m.visible);
+const heroTitle = document.querySelector(".hero h2");
+if (heroMovie && heroTitle) {
+  heroTitle.textContent = heroMovie.titulo;
+  document.querySelector(".director-duration").textContent =
+    `Director: ${heroMovie.director} | ${heroMovie.duracion} min`;
+  document.querySelector(".hero-description").textContent = heroMovie.sinopsis;
+  const reservarLink = document.querySelector(".hero-buttons a");
+  reservarLink.href = `/movie-detail.html?id=${heroMovie.id}`;
+}
+
 //----------------------------------------------------------------------------
 //**************************contenedores:*************************************
 // contenedor en Home page
@@ -61,7 +73,9 @@ function displayMovies($container, limit = null) {
 displayMovies($homePageMovieContainer, 3);
 
 if ($moviesContainer) {
-  setupFilters(movies, (filtered) => renderMoviesGrid($moviesContainer, filtered));
+  setupFilters(movies, (filtered) =>
+    renderMoviesGrid($moviesContainer, filtered),
+  );
 }
 
 function displayAdminPanel($tableContainer) {
