@@ -1,0 +1,38 @@
+.print-ticket {
+  display: none;
+}
+
+@media print {
+  body>*:not(.print-ticket) {
+    display: none;
+  }
+
+  .print-ticket {
+    display: block;
+    padding: 2rem;
+    font-family: Arial, sans-serif;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .print-ticket h1 {
+    text-align: center;
+    color: #e50914;
+  }
+
+  .print-ticket h2 {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+
+  .print-ticket hr {
+    border: 1px solid #e50914;
+  }
+
+  .print-ticket p {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+    color: black;
+  }
+}
