@@ -1,6 +1,5 @@
 import { postMovie, getMovie, updateMovie } from "./supabase-client.js";
 
-// Referencias a los elementos del DOM en form.html
 const $movieForm = document.getElementById("movie-form");
 const $title = document.getElementById("title");
 const $genre = document.getElementById("genre");
@@ -14,6 +13,8 @@ const $ageRating = document.getElementById("age-rating");
 
 const params = new URLSearchParams(window.location.search);
 const editId = params.get("id");
+
+
 
 if ($movieForm) {
   if (editId) {
